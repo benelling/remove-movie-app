@@ -32,9 +32,9 @@ export default class MovieList extends Component {
       }).el)
     )
 
-    const loaderEl = this.el.querySelector('.the-loader')
+    const loaderEl = this.el.querySelector('.the-loader') // as HTMLDivElement (아래 optional chaining 통해 ? 붙여쓰는 것도 가능)
     movieStore.state.loading
-      ? loaderEl.classList.remove('hide')
-      : loaderEl.classList.add('hide')
+      ? loaderEl?.classList.remove('hide')
+      : loaderEl?.classList.add('hide')
   }
 }
